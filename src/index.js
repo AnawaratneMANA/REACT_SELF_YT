@@ -7,6 +7,10 @@ import ReactDom  from 'react-dom'
 //Adding some CSS -> Importing CSS
 import './index.css'
 
+//Creating Varibles
+const manfacture = "Acer"
+const model = "Inspiron 15"
+const img = "https://images-na.ssl-images-amazon.com/images/I/41vMYgD92xL.jpg"
 
 //Adding CSS classes to the Component.
 function BookList(){
@@ -18,19 +22,28 @@ function BookList(){
     </div>
 
     <section className = "bookList">
-    <Book/>
+    <Book job='developer'/>
+    <Book title ="2nd one title"/>
     </section>
   </list>
   );
 }
 
-const Book = () => {
+//Adding different parameters to the book component
+const Book = (props) => {
+
+  //Printing Props 
+  console.log(props)
+
   const Brand = 'Acer';
   return (
     <article className="book"> 
-      <img src = "https://images-na.ssl-images-amazon.com/images/I/41vMYgD92xL.jpg" alt ="image" ></img>
-      <h1>{Brand.toUpperCase()} {5} Inspiron Laptop</h1>
-      <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Core i7 Laptops</h4>
+      <img src = {img} alt ="image" ></img>
+      <h1>{manfacture.toUpperCase()}</h1>
+      <h4>{model} </h4>
+      <h2>{props.job}</h2>
+      <h2>{props.title}</h2>
+      {console.log(props)}
     </article>
   )
 }

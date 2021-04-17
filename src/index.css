@@ -34,8 +34,8 @@ body {
     margin-top: 0.5rem;
 }
 
-.book{
-    color: red;
+.book h4{
+    color: blue;
     letter-spacing: 5px;
     font-size: 0.75rem;
     margin-top: 0.25rem;
