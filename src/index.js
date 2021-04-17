@@ -76,7 +76,9 @@ const Book = (props) => {
   //This is called object distruturing in JavaScript.
   const {img, manfacture, model, status } = props;
   return (
-    <article className="book">
+    <article className="book" onMouseOver={() => {
+      console.log({manfacture});
+    }}>
       <img src={img} alt="image"></img>
       <h1>{manfacture}</h1>
       <h4>{model} </h4>
