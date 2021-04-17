@@ -11,7 +11,8 @@ import './index.css'
 const AcerLaptop = {
   img: "https://images-na.ssl-images-amazon.com/images/I/41vMYgD92xL.jpg",
   model: "Inspiron 15",
-  manfacture: "Acer"
+  manfacture: "Acer",
+  status: 'In Stock'
 }
 
 const LenovoLaptop = {
@@ -31,8 +32,10 @@ function BookList(){
     </div>
 
     <section className = "bookList">
-    <Book img={AcerLaptop.img} manfacture={AcerLaptop.manfacture} model ={AcerLaptop.model}/>
-    <Book img={LenovoLaptop.img} manfacture={LenovoLaptop.manfacture} model ={LenovoLaptop.model}/>
+    <Book img={AcerLaptop.img} manfacture={AcerLaptop.manfacture} model ={AcerLaptop.model} stock = {AcerLaptop.status}/>
+    <Book img={LenovoLaptop.img} manfacture={LenovoLaptop.manfacture} model ={LenovoLaptop.model}>
+      <p>This Laptop is work very well with business</p>
+    </Book>
     </section>
   </list>
   );
@@ -40,12 +43,15 @@ function BookList(){
 
 //Adding different parameters to the book component
 const Book = (props) => {
-  const {img, manfacture, model} = props;
+  //This is called object distruturing in JavaScript.
+  const {img, manfacture, model, stock, children} = props;
   return (
     <article className="book"> 
       <img src={img} alt ="image"></img>
       <h1>{manfacture}</h1>
       <h4>{model} </h4>
+      <h4>{stock}</h4>
+      {children}
     </article>
   )
 }
