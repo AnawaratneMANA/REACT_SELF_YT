@@ -40,11 +40,12 @@ function BookList(){
 
 //Adding different parameters to the book component
 const Book = (props) => {
+  const {img, manfacture, model} = props;
   return (
     <article className="book"> 
-      <img src={props.img} alt ="image"></img>
-      <h1>{props.manfacture}</h1>
-      <h4>{props.model} </h4>
+      <img src={img} alt ="image"></img>
+      <h1>{manfacture}</h1>
+      <h4>{model} </h4>
     </article>
   )
 }
