@@ -47,7 +47,7 @@ const Title = () => {
 }
 
 const Specs = () => {
-  return <h4>Core i7 Laptops</h4>
+  return <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Core i7 Laptops</h4>
 }
 
 //Attaching the component to the HTML interface.
