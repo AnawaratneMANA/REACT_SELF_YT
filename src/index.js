@@ -51,7 +51,7 @@ function BookList() {
       <section className="bookList">
         {Laptops.map((laptop)  => {
             return (
-              <Book key={laptop.id} laptop={laptop}></Book>
+              <Book key={laptop.id} {...laptop}></Book>
             )
         })}
       </section>
@@ -62,7 +62,7 @@ function BookList() {
 //Adding different parameters to the book component
 const Book = (props) => {
   //This is called object distruturing in JavaScript.
-  const {img, manfacture, model, status } = props.laptop;
+  const {img, manfacture, model, status } = props;
   return (
     <article className="book">
       <img src={img} alt="image"></img>
