@@ -19,20 +19,35 @@ function BookList(){
 
     <section className = "bookList">
     <Book/>
+    <Book/>
+    <Book/>
+    <Book/>
     </section>
   </list>
   );
 }
 
 const Book = () => {
-  const Brand = 'Acer';
   return (
     <article className="book"> 
-      <img src = "https://images-na.ssl-images-amazon.com/images/I/41vMYgD92xL.jpg" alt ="image" ></img>
-      <h1>{Brand} Inspiron Laptop</h1>
-      <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Core i7 Laptops</h4>
+      <Image></Image>
+      <Title></Title>
+      <Specs></Specs>
     </article>
   )
+}
+
+const Image = () => {
+
+  return <img src = "https://images-na.ssl-images-amazon.com/images/I/41vMYgD92xL.jpg" alt ="image" ></img>
+}
+
+const Title = () => {
+  return <h1>Acer Inspiron Laptop</h1>
+}
+
+const Specs = () => {
+  return <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Core i7 Laptops</h4>
 }
 
 //Attaching the component to the HTML interface.
