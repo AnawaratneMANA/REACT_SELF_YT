@@ -23,12 +23,18 @@ const Laptops = [
   {
     img: "https://m.media-amazon.com/images/I/61dZniqZ32L._AC_UY218_.jpg",
     model: "Lenovo T480",
-    manfacture: "Lenovo"
-  }
-]
+    manfacture: "Lenovo",
+  },
 
-//Simple Array
-const array = ['Akash', 'Kamal'];
+  {
+    img: "https://m.media-amazon.com/images/I/91kzJEfoVqL._AC_UL320_.jpg",
+    model: "HP Elitebook 840",
+    manfacture: "HP",
+    status: 'Pre order'
+  },
+
+
+]
 
 //Adding CSS classes to the Component.
 function BookList() {
@@ -40,7 +46,11 @@ function BookList() {
       </div>
 
       <section className="bookList">
-        {array}
+        {Laptops.map((laptop)  => {
+            return (
+              <Book laptop={laptop}></Book>
+            )
+        })}
       </section>
     </list>
   );
@@ -49,13 +59,13 @@ function BookList() {
 //Adding different parameters to the book component
 const Book = (props) => {
   //This is called object distruturing in JavaScript.
-  const {img, manfacture, model, stock } = props;
+  const {img, manfacture, model, status } = props.laptop;
   return (
     <article className="book">
       <img src={img} alt="image"></img>
       <h1>{manfacture}</h1>
       <h4>{model} </h4>
-      <h4>{stock}</h4>
+      <h4>{status}</h4>
     </article>
   )
 }
