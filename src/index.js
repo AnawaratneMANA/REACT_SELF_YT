@@ -4,28 +4,35 @@ import React from 'react'
 //Importing React-DOM 
 import ReactDom  from 'react-dom'
 
-//Adding some CSS
+//Adding some CSS -> Importing CSS
+import './index.css'
 
 
-
+//Adding CSS classes to the Component.
 function BookList(){
   return ( 
   <list>
-    <h1>Topic</h1>
-    <p>Sample Text</p>
+    <div className="container">
+      <h1>Topic</h1>
+      <p>Sample Text</p>
+    </div>
+
+    <section className = "bookList">
     <Book/>
     <Book/>
     <Book/>
     <Book/>
+    </section>
   </list>
   );
 }
 
 const Book = () => {
   return (
-    <article> 
+    <article className="book"> 
       <Image></Image>
       <Title></Title>
+      <Specs></Specs>
     </article>
   )
 }
@@ -36,7 +43,11 @@ const Image = () => {
 }
 
 const Title = () => {
-  return <h4>Acer Inspiron Laptop</h4>
+  return <h1>Acer Inspiron Laptop</h1>
+}
+
+const Specs = () => {
+  return <h4>Core i7 Laptops</h4>
 }
 
 //Attaching the component to the HTML interface.
