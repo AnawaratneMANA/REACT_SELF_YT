@@ -19,7 +19,6 @@ const LenovoLaptop = {
   img: "https://m.media-amazon.com/images/I/61dZniqZ32L._AC_UY218_.jpg",
   model: "Lenovo T480",
   manfacture: "Lenovo"
-
 }
 
 //Adding CSS classes to the Component.
