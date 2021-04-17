@@ -60,7 +60,9 @@ function BookList() {
 }
 
 // Normal method get called upon the click event
-const clickHandler = () => {
+const clickHandler = (e) => {
+  console.log(e);
+  console.log(e.target);
   alert('Hello World');
 }
 
