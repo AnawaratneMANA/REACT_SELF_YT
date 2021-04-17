@@ -20,9 +20,18 @@ function Greeting(){
   <mainarticle>
     <h1>Topic</h1>
     <p>Sample Text</p>
+    <Person/>
+    <Message/>
   </mainarticle>
   );
 }
+
+//Nested components
+const Person = () =>  <person>This is the Person</person>; //This works without returnn.
+const Message = () => {
+  return <p> This is the message paragraph</p> //Each component must have a return statement.
+}
+
 
 
 //Using fragments -> we can also keep the tags empty.
