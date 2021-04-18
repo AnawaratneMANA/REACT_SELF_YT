@@ -15,7 +15,6 @@ const UseEffectFetchData = () => {
       getUsers();
   },[]);
   
-  
   return (
     <React.Fragment>
     <h3>github users</h3>
