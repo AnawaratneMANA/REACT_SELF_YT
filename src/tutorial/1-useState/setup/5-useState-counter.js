@@ -14,7 +14,7 @@ const UseStateCounter = () => {
       //setValue(value + 1);
       //This is getting the real previous value (3 clicks 3 updates)
        setValue((prevState)=> {
-         return prevState + 1;
+         return prevState + 1; //This return value will be then next state value.
        })
     },2000
   )
