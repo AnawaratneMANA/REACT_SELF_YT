@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from './Product'
+import defaultImage from '../../../assets/default-image.jpeg'
 import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 
 // ATTENTION!!!!!!!!!!
@@ -11,6 +12,7 @@ const Index = () => {
   return (
     <div>
       <h2>products</h2>
+        {/*<img src={defaultImage}/>*/}
       <section className='products'>
         {products.map((product) => {
           return <Product key={product.id} {...product} />
