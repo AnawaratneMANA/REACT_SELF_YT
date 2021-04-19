@@ -23,7 +23,7 @@ const ContextAPI = () => {
 };
 
 const List = () => {
-    const mainData = useContext(personContext);
+    const mainData = useContext(PersonContext);
   return (
     <>
       {mainData.people.map((person) => {
