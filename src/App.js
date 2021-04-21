@@ -10,6 +10,11 @@ const App = () => {
                 <Typography variant = "h2" align = "center">Memories</Typography>
                 <img src={memories} alt ="memories" height ="60"/>
             </AppBar>
+            <Grow in>
+                <Grid container justify= "space-between" alignItems= "stretch" spacing={3}>
+
+                </Grid>
+            </Grow>
         </Container>
     )
 }
