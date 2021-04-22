@@ -15,6 +15,10 @@ const Form = () => {
     const handleSubmit = () => {
 
     }
+
+    const clear = () => {
+
+    }
     return (
         <Paper className={classes.paper}>
             <form autoComplete="off" noValidate className={classes.form} onSubmit={handleSubmit}>
@@ -65,6 +69,7 @@ const Form = () => {
                     color="primary"
                     size="large"
                     type = "submit"
+                    fullWidth
                 > Submit </Button>
 
                 <Button
