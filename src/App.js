@@ -4,7 +4,9 @@ import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 //Importing the Image.
 import memories from './images/far_cry.png'
+import useStyle from './styles';
 const App = () => {
+    const classes = useStyle();
     return (
         <Container maxWidth={"lg"}>
             <AppBar position= "static" color = "inherit">
